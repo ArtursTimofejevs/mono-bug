@@ -1,0 +1,37 @@
+{
+	"name": "mono-bug",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vite-node ./scripts/develop.ts -- shared app",
+		"build": "pnpm -r --filter './packages/shared' --filter './packages/app' run build",
+		"lint": "eslint --ext .ts,.tsx .",
+		"prettier:check": "prettier --check",
+		"prettier:write": "prettier --write",
+		"check:code": "pnpm lint && pnpm prettier:check"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^18.11.9",
+		"@typescript-eslint/eslint-plugin": "^5.44.0",
+		"@typescript-eslint/parser": "^5.44.0",
+		"chalk": "^5.1.2",
+		"concurrently": "^7.6.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-standard-with-typescript": "^23.0.0",
+		"eslint-define-config": "^1.12.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-n": "^15.5.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-promise": "^6.1.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"prettier": "^2.8.0",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.6.4",
+		"vite-node": "^0.25.3"
+	}
+}
